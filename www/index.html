@@ -1,0 +1,245 @@
+<html>
+  <head>
+    <title>Contador de truco</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+
+
+<!--
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap" rel="stylesheet">
+
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">
+
+
+-->
+
+
+    <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+        <meta name="color-scheme" content="light dark">
+  </head>
+  <body class="fondo"  >
+    <div class="visible" id="pant1">
+      <div class="row1">
+      <input type="text" id="e1" class="iequipo" placeholder="Equipo 1" />
+      <br />
+      <input type="text" id="e2" class="iequipo" placeholder="Equipo 2"/>
+      </div>
+      <br />
+      <div class="row2">
+      <input class="boton" type="button" id="a24" value="a 24"/>
+      <input class="boton" type="button" id="a30" value="a 30"/>
+      </div>
+      <br />
+      <div class="row3">
+      <input type="button" class="botoni"id="inicio" value="Inicio" />
+      </div>
+    <div class="oculto"id="pant2">
+        <div class="row4">
+          <div class="arribaizquierda">
+        <input class="suma"type="button" id="s1" value="+"/>
+      </div>
+        <input class="suma"type="button" id="s2" value="+"/>
+        </div>
+        <div class="row6">
+      <div class="ne">
+        <div class="arribaizquierda1">
+      <h2 id="ne1">-</h2>
+       </div>
+       <div class="arribaderecha">  
+      <h2 id="ne2">-</h2>
+      </div>
+    </div>
+    </div>
+      <br />
+      <div class="alineaNegros">
+      <div class="rowi1">
+      <img class="imge"src="img/0.png"id='e11'>
+      <img class="imge"src="img/0.png" id='e21'>
+      </div>
+      <div class="rowi2">
+        <img class="imge"src="img/0.png" id='e12'>
+        <img class="imge"src="img/0.png" id='e22'>
+        </div>
+        <div class="rowi3">
+          <img class="imge"src="img/0.png" id='e13'>
+          <img class="imge"src="img/0.png" id='e23'>
+          </div>
+          <div class="rowi4">
+            <img class="imge"src="img/0.png" id='e14'>
+            <img class="imge"src="img/0.png" id='e24'>
+            </div>
+            <div class="rowi5">
+              <img class="imge"src="img/0.png"id='e15'>
+              <img class="imge"src="img/0.png"id='e25'>
+              </div>
+              <div class="rowi6">
+                <img class="imge"src="img/0.png" id='e16'>
+                <img class="imge"src="img/0.png"id='e26'>
+                </div>
+              </div>
+        <br>
+
+      <div class="medio">
+      <h1 id="punt1">0</h1>
+      <h1 id="punt2">0</h1>
+        </div>
+      <div class="row4">
+      <input class="resta"type="button" id="r1" value="-"/>
+    
+      
+      <input type="button"class="resta" id="r2" value="-"/>
+    </div>
+      <br>
+      <div class="abajo">
+      <input type="button" class="final" id="fin" value="fin"/>
+    </div>
+    </div>
+    <script>
+         $(document).ready(function(){
+            $("#inicio").on('click', cambiopant) //llamada a cambio pantalla
+            var objetivo = 0;
+            $("#a24").on('click', function() //a 24
+            {
+              $('#pmax').val("a 24")
+              objetivo = 24;
+              console.log(objetivo);
+            })
+            $("#a30").on('click', function(){ //a 30
+              $('#pmax').val("a 30")
+              objetivo = 30;
+              console.log(objetivo)
+            })
+            console.log("al inicio" + objetivo) //objetivo inicial
+            $('#s1').on('click', sumav1);
+            $('#s2').on('click', sumav2);
+            $('#r1').on('click', restav1);
+            $('#r2').on('click', restav2);
+            $('#fin').on('click', fin);
+            function cambiopant(){ //cambio pantalla
+              if(objetivo!=0){
+                $("#pant1").removeClass("visible").addClass("oculto");
+                $("#pant2").removeClass("oculto").addClass("visible");
+                $('#ne1').html($('#e1').val());
+                $('#ne2').html($('#e2').val()) ;
+              }
+              else{
+                alert("Ingrese el objetivo bobi")
+              }
+            }
+            function sumav1(){
+              va1=$('#punt1').text();
+              if(va1<objetivo){
+              va1++;
+              va1=$('#punt1').text(va1);console.log("funca");
+                dibujame(1);
+              }
+            }
+            function sumav2(){
+              va2=$('#punt2').text();
+              if(va2<objetivo){
+              va2++;
+              $('#punt2').text(va2);
+              dibujame(2)
+              }
+            }
+            function restav1(){
+              va1=$('#punt1').text();
+              if(va1>0){
+                va1--;
+                $('#punt1').text(va1);
+                dibujame(1)
+              }
+            }
+            function restav2(){
+              va2=$('#punt2').text();
+              if(va2>0){
+                va2--;
+                $('#punt2').text(va2);
+                dibujame(2)
+              }
+            }
+            function dibujame(eq){
+              puntos1= parseInt($('#punt'+ eq).text());
+              var comp=puntos1;
+              if(objetivo == 24){
+                for(i=1;i<7;i++)
+{
+if(comp>=2 && i==3)
+{
+$("#e"+eq+i).attr("src","2.png");
+comp-=2;
+}
+else
+{
+if(comp>=5)
+{
+$("#e"+eq+i).attr("src","5.png");
+comp-=5;
+console.log("hola soy omelo chino")
+}
+else
+{
+$("#e"+eq+i).attr("src",comp+".png");
+comp=0;
+}
+}
+}
+              }
+              if(objetivo == 30){
+              for(i=1;i<=6;i++){
+                if(comp>=5){
+                  $('#e'+eq+i).attr('src', '5.png');
+                  comp-=5;
+                }
+                else{ //0;1;2;3;4
+                  $('#e'+eq+i).attr('src',comp+".png");
+                  comp=0;
+                }
+              }
+            }
+/*if(max==24)
+{
+
+for(i=1;i<7;i++)
+{
+if(comp>=2 && i==3)
+{
+$("#"+n+i).attr("src","images/2.png");
+comp-=2;
+}
+else
+{
+if(comp>=5)
+{
+$("#"+n+i).attr("src","images/5.png");
+comp-=5;
+}
+else
+{
+$("#"+n+i).attr("src","images/"+comp+".png");
+comp=0;
+}
+}
+}
+}*/
+            }
+            function fin(){
+              va1=0;
+              va2=0;
+              objetivo=0;
+              $('#punt1').text(0);
+              $('#punt2').text(0);
+              $("#pant1").removeClass("oculto").addClass("visible");
+              $("#pant2").removeClass("visible").addClass("oculto");
+              $('.imge').attr('src','img/0.png');
+
+            }
+         })
+    </script>
+  </body>
+</html>

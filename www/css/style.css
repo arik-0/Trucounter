@@ -1,0 +1,239 @@
+.oculto{
+    visibility: hidden;
+    display: none;
+}
+.visible{
+    visibility: visible;
+    display: block;
+}
+#pant1{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+#e1{
+    margin-bottom:20px;
+}
+#a24{
+    margin-right:75px;
+}
+.boton{
+    background-color: orangered;
+    border-radius: 5px;
+    border: 2px solid orangered;
+    border-color: #008CBA;
+    color: white;
+    margin: 5px;
+    padding: 15px 30px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 18px;
+      }
+
+
+  .fondo{
+      background-color: green;
+  }
+  #pant1{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      font-family: 'Play', sans-serif;
+  }
+  .iequipo{
+    font-size: 16px;
+    font-weight: 400;
+    background:#008CBA;
+    color: #ffff;
+    border-radius: 12px 0px 12px 0px;
+    border: 2px solid #5878ca;
+    border-color: #008CBA;
+    width: 400px;
+    height: 50px;
+  }
+  .iequipo::placeholder{
+      color: #fff;
+  }
+img{
+    width: 50px;
+    margin: 2px 16vw;
+}
+.alineaNegros{
+    display: flex;
+    justify-self: center;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid red;
+    margin-top: 5px;
+    margin-bottom: 5px;
+
+}
+.rowi1{
+    display: flex;
+    flex-direction: row;
+    justify-self: center;
+    margin-top: 20px;
+
+}
+.rowi2{
+    display: flex;
+    flex-direction: row;
+    justify-self: center;
+    
+}
+.rowi3{
+    display: flex;
+    flex-direction: row;
+    justify-self: center;
+    padding-bottom: 15px;
+    border-bottom: 1px solid red;
+    margin-bottom: 15px;
+}
+.rowi4{
+    display: flex;
+    flex-direction: row;
+    justify-self: center;
+    
+}
+.rowi5{
+    display: flex;
+    flex-direction: row;
+    justify-self: center;
+    align-items: center;
+    
+}
+.rowi6{
+    display: flex;
+    flex-direction: row;
+    justify-self: center;
+    align-items: center;
+    margin-bottom: 20px;
+    
+}
+.suma{
+    background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+.resta{
+    background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+  .botonI{
+    background-color: red;
+    border-radius: 5px;
+    border: 2px solid yellow;
+    border-color: red;
+    color: white;
+    margin: 5px;
+    padding: 13px 26px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 18px;
+    width: 400px;
+  }
+  .row4{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.row5{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.row5{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.medio{
+    display: flex;
+    flex-direction: row ;
+    justify-content: space-evenly;
+    border-width: 5px;
+    border-color: orangered;
+
+}
+.foforo1{
+
+    display: flex;
+    flex-direction: column ;
+    max-width: 40vw;
+}
+.foforo2{
+    display: flex;
+    flex-direction: column ;
+    max-width: 40vw;
+
+}
+  .final{
+    background-color: #dd8706;
+    justify-content: center;
+    border-radius: 5px;
+    border: 2px solid #b87106;
+    border-color: #dd8706;
+    color: white;
+    margin: 20;
+    display: flex;
+    padding: 15px 28px;
+    font-size: 9px;
+    display: flex;
+    align-self: center;
+    width:20vh
+    
+  }
+  #ne1, #ne2{
+    color: #ffff;
+    margin: 5px;
+    font-size: 16px;
+  }
+  .arribaizquierda1{
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      width: 48vw;
+  }
+  .arribaderecha{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    width: 48vw;
+}
+#r2{
+    display: flex;
+    justify-content: flex-end;
+}
+  .puntos{
+      color: #ffff;
+      margin: 10px;
+      font-size: 100px;
+  }
+  .abajo{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  }
+  .ne{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  }
